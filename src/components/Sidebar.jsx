@@ -1,0 +1,85 @@
+import React from 'react'
+import { FaHome } from 'react-icons/fa';
+import { BsPersonFillLock } from 'react-icons/bs';
+import {BiShoppingBag} from 'react-icons/bi';
+import { FaUserCircle} from 'react-icons/fa';
+import { RxNotionLogo} from 'react-icons/rx';
+import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+
+
+const Sidebar = () => {
+  return (
+ 
+    <div className="d-flex flex-column flex-shrink-0 bg-body-tertiary" style={{width: "4.5rem"}}>
+    <Link to="/" className="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+       <RxNotionLogo size={40}/>
+      <span className="visually-hidden">Icon-only</span>
+    </Link>
+    <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
+      <li className="nav-item">
+        <Link to="/" className="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+        < FaHome size={30}/>
+        </Link>
+      </li>
+    
+      <li>
+        <Link to="/products" className="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+          <BiShoppingBag size={30}/>
+        </Link>
+      </li>
+      <li>
+        <Link to="/cart" className="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+         <FaShoppingCart size={30}/>
+         <h3>0</h3>
+        </Link>
+      </li>
+      <li>
+        <Link to="/signup" className="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+           <FaUserCircle size={30}/>
+        </Link>
+      </li>
+      <li>
+        <Link to="/signin" className="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+          <BsPersonFillLock size={30}/>
+        </Link>
+      </li>
+    </ul>
+    <div className="dropdown border-top">
+      <a href="/" className="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" className="rounded-circle" />
+      </a>
+      <ul className="dropdown-menu text-small shadow">
+        <li><a className="dropdown-item" href="/">New project...</a></li>
+        <li><a className="dropdown-item" href="/">Settings</a></li>
+        <li><a className="dropdown-item" href="/">Profile</a></li>
+        <li><hr className="dropdown-divider" /></li>
+        <li><a className="dropdown-item" href="/">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  )
+}
+
+export default Sidebar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
