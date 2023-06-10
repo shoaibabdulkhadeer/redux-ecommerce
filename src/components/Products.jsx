@@ -24,8 +24,8 @@ const Products = () => {
                  {data.map((x) => {
                     return (
                         <div class="col-xl-3 col-md-5 col-sm-9">
-                        <div className="card my-2 mx-2" style={{ width: "18rem",alignSelf:"center" }}>
-                            <img src={x.image} height={250} className="card-img-top" alt="" />
+                        <div className="card my-2 mx-2" style={{ width:"14rem",alignSelf:"center" }}>
+                            <img src={x.image}  className="card-img-top p-2" alt="" style={{width:"150px",alignSelf:"center"}}/>
                             <div className="card-body">
                                 <h5 className="card-title">{x.title}</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
