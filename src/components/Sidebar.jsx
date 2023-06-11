@@ -17,7 +17,7 @@ const Sidebar = () => {
     return (
  
     <div className="d-flex flex-column  flex-shrink-0 bg-body-tertiary" style={{width: "4.5rem"}}>
-    <Link to="/" className="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+    <Link to="/" className="d-block shadow p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
        <RxNotionLogo size={40}/>
       <span className="visually-hidden">Icon-only</span>
     </Link>
@@ -27,11 +27,11 @@ const Sidebar = () => {
 
       <li className="nav-item">
       {location.pathname==='/' ? 
-        <Link to="/" className="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+        <Link to="/" className="nav-link shadow-lg active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
         < FaHome size={30}/>
         </Link>
      :
-     <Link to="/" className="nav-link  py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+     <Link to="/" className="nav-link shadow-lg  py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
      < FaHome size={30}/>
      </Link>
       }
@@ -43,12 +43,12 @@ const Sidebar = () => {
       <li>
       {location.pathname==='/products' ?  
       <Link to="/products"  
-        className="nav-link active py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+        className="nav-link active py-3 shadow-lg  border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
           <BiShoppingBag size={30}/>
         </Link>
     : 
     <Link to="/products"  
-    className="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+    className="nav-link  py-3 border-bottom shadow-lg  rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
       <BiShoppingBag size={30}/>
     </Link>    
     }
@@ -58,12 +58,12 @@ const Sidebar = () => {
   {/* Cart page cheap logic for active bg :) */}
       <li>
       {location.pathname==='/cart' ?
-      <Link to="/cart" className="nav-link py-3 active border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+      <Link to="/cart" className="nav-link py-3 shadow-lg  active border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
       <FaShoppingCart size={30}/>
       <h3>0</h3>
      </Link>
      :
-     <Link to="/cart" className="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+     <Link to="/cart" className="nav-link py-3 shadow-lg  border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
          <FaShoppingCart size={30}/>
          <h3>0</h3>
         </Link>
@@ -73,11 +73,11 @@ const Sidebar = () => {
  {/* Signup page cheap logic for active bg :) */}
       <li>
       {location.pathname==='/signup'?
-        <Link  to="/signup" className="nav-link  py-3 active border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+        <Link  to="/signup" className="nav-link shadow-lg   py-3 active border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
         <FaUserCircle size={30}/>
      </Link> 
      :
-     <Link to="/signup" className="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+     <Link to="/signup" className="nav-link  py-3 shadow-lg  border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
      <FaUserCircle size={30}/>
   </Link>
   }
@@ -87,12 +87,12 @@ const Sidebar = () => {
   {/* Signin page cheap logic for active bg :) */}
       <li>
       {location.pathname==='/signin'? 
-     <Link to="/signin" className="nav-link active  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+     <Link to="/signin" className="nav-link active shadow-lg   py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
      <BsPersonFillLock size={30}/>
    </Link>  
    : 
 
-   <Link to="/signin" className="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+   <Link to="/signin" className="nav-link shadow-lg   py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
    <BsPersonFillLock size={30}/>
  </Link>
     }
