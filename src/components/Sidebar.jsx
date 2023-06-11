@@ -7,6 +7,7 @@ import { RxNotionLogo} from 'react-icons/rx';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
@@ -14,15 +15,17 @@ const Sidebar = () => {
   
     const location = useLocation();
 
+    const cart = useSelector(state => state.cart)
+
     return (
  
-    <div className="d-flex flex-column  flex-shrink-0 bg-body-tertiary" style={{width: "4.5rem"}}>
+    <div className="d-flex flex-column   flex-shrink-0 bg-body-tertiary" style={{width: "4.5rem"}}>
     <Link to="/" className="d-block shadow p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
        <RxNotionLogo size={40}/>
       <span className="visually-hidden">Icon-only</span>
     </Link>
 
-    <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" style={{position:"sticky",top:"80px"}}>
      {/* Home page cheap logic for active bg :) */}
 
       <li className="nav-item">
@@ -60,12 +63,13 @@ const Sidebar = () => {
       {location.pathname==='/cart' ?
       <Link to="/cart" className="nav-link py-3 shadow-lg  active border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
       <FaShoppingCart size={30}/>
-      <h3>0</h3>
+      <h3>{cart.length}</h3>
      </Link>
      :
      <Link to="/cart" className="nav-link py-3 shadow-lg  border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
          <FaShoppingCart size={30}/>
-         <h3>0</h3>
+      <h3>{cart.length}</h3>
+         
         </Link>
      }
       </li>

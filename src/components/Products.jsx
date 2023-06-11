@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import {add} from '../features/cart'
+import { useDispatch } from 'react-redux'
 
 const Products = () => {
 
@@ -15,21 +17,29 @@ const Products = () => {
             console.error(err)
         }
     }, [])
-
+ 
+    const dispatch = useDispatch()
+     
+    const addbtn = (product) => {
+       dispatch(add(product))
+    }
+ 
     return (
-        <div className='container-fluid' style={{minHeight: "100vh"}}>
+        <div className='container-fluid' style={{marginTop:"70px"}}>
 
-            <div class="row align-items-start">
+            <div class="row">
                  
                  {data.map((x) => {
+
+                         let des = x.description
                     return (
-                        <div class="col-xl-3 col-md-5 col-sm-9">
-                        <div className="card my-2 mx-2" style={{ width:"14rem",alignSelf:"center" }}>
-                            <img src={x.image}  className="card-img-top p-2" alt="" style={{width:"150px",alignSelf:"center"}}/>
+                        <div class="col-xl-3 col-md-5 col-sm-12 ">
+                        <div className="card mt-4 pt-5 " style={{ width:"14rem",alignSelf:"center",minHeight:"500px" }}>
+                            <img src={x.image}  className="card-img-top " alt="" style={{width:"150px",alignSelf:"center"}}/>
                             <div className="card-body">
-                                <h5 className="card-title">{x.title}</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="/" className="btn btn-primary">Go somewhere</a>
+                                <h5 className="card-title"> {x.title} </h5>
+                                <p className="card-text">{des.substring(0,135)}</p>
+                                <button onClick={() => addbtn(x)} className="btn btn-primary">Add to cart</button>
                             </div>
                           </div>
                     </div>

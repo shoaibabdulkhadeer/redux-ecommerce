@@ -8,7 +8,7 @@ import { AiFillAmazonSquare} from 'react-icons/ai';
 const Main = () => {
   return (
     <div >
-      <div className="container col-xxl-10 px-4 py-5" >
+      <div className="container col-xxl-10 px-4 py-5" style={{marginTop:"60px"}}>
     <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
 
       <div className="col-10 col-sm-8 col-lg-4">

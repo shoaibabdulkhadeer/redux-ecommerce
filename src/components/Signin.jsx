@@ -2,7 +2,7 @@ import React from 'react'
 
 const Signin = () => {
   return (
-    <div>
+    <div  style={{marginTop:"70px"}}>
         <div className="row align-items-center g-lg-5 py-5 px-3">
         <div className="col-md-10 mx-auto col-lg-5">
         <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">

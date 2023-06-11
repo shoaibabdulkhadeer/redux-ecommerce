@@ -2,7 +2,7 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <div>
+    <div style={{marginTop:"70px"}}>
       <div className="row align-items-center g-lg-5 py-5 px-3">
       <div className="col-lg-6 text-center text-lg-start">
         <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">Vertically centered hero sign-up form</h1>
