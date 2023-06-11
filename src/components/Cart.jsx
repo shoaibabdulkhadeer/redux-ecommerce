@@ -70,7 +70,7 @@ const Cart = () => {
             
           
               <div class="col-6 col-sm-3 col-lg-2">
-                 <button className='btn btn-warning'>Remove</button>
+                 <button className='btn btn-info'>Order</button>
               </div>
               <hr className='mt-2'/>
             </div>
