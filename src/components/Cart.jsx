@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux'
 const Cart = () => {
  
   const cart = useSelector(state => state.cart)
+
+ 
  
   const dispatch = useDispatch()
 
@@ -13,6 +15,14 @@ const Cart = () => {
     dispatch(remove(id))
   }
 
+//total price reduce array method
+  const totalPrice = cart.reduce((sum,x) => {
+    return sum = sum + x.price
+  },0)
+
+  
+
+  
   return (
     <div style={{minHeight: "100vh",marginTop:"80px" , display:"flex",justifyContent:"center"}} className='container-fluid '>
      <div class="container text-center">
@@ -65,7 +75,7 @@ const Cart = () => {
               </div>
 
               <div class="col-6 col-sm-3 col-lg-2">
-                 <b>Total Price:</b>
+                 <b>Total Price:${totalPrice}</b>
               </div>
             
           
