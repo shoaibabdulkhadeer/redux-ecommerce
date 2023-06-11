@@ -32,7 +32,12 @@ const Cart = () => {
         <h3 className='font-monospace mt-3'>All Products</h3>
 
 
-        {cart.map((x) => {
+        {cart.length === 0 ? (
+          <p>Your cart is 🛒 empty</p>
+        )
+          :
+        
+        cart.map((x) => {
           return (
        
             <div class="row align-items-center justify-content-center my-3 " >
